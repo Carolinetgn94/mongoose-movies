@@ -10,7 +10,9 @@ const app = express();
 app.use(express.json());
 
 app.use("/api/movies", moviesRouter)
-
+app.get("/ping", (req, res) =>{
+    res.send("pong");
+})
 
 app.listen(port, () => {
     console.log(`Listening to port: ${port}`);
