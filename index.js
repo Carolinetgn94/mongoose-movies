@@ -4,7 +4,7 @@ require("./config/database");
 
 const moviesRouter = require("./routes/movies")
 
-const port = process.env.PORT;
+const port = process.env.PORT || 4000;
 const app = express();
 
 app.use(express.json());
